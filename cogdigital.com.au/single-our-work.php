@@ -28,31 +28,45 @@ get_template_part(
     ]
 );
 
-// Render the first image section
-$images_section_one = $single_project['images_section'];
+
+if (have_rows('single_project')) :
+    while (have_rows('single_project')) :
+        the_row();
+        if (have_rows('images_section')) :
+            while (have_rows('images_section')) :
+                the_row();
+                $format = get_sub_field('image_format');
+                echo $format;
+
+            endwhile;
+        endif;
+    endwhile;
+endif;
+// // Render the first image section
+// $images_section_one = $images_section['images_section'];
 
 
-foreach($images_section_one as $images){
+// foreach($images_section_one as $images){
 
-    $image_format = $images['image_format'];
-  
-    $fullwidth_image_section = $images['fullwidth_image_section'];
-    
-    print_r ($fullwidth_image_section);
+//     $image_format = $images['image_format'];
 
-    get_template_part(
-        'template-parts/single-project',
-        'images',
-        [
-            'image_format' => $image_format,
-        ]
-    );
-}
+//     $fullwidth_image_section = $images['fullwidth_image_section'];
+
+//     print_r ($fullwidth_image_section);
+
+//     get_template_part(
+//         'template-parts/single-project',
+//         'images',
+//         [
+//             'image_format' => $image_format,
+//         ]
+//     );
+// }
 
 // if ( have_rows ( 'images_section' ) ) :
 //     while( have_rows( 'images_section' ) ) :
 //         the_row();
-        
+
 //         print_r(the_row());
 //         // Load subfield values
 //         $image_format_one = get_sub_field('image_format');
