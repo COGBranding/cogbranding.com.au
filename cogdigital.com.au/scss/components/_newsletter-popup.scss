@@ -1,0 +1,96 @@
+.newsletter-popup {
+    position: fixed;
+    width: 450px;
+    bottom: 1rem;
+    right: -30%;
+    opacity: 0;
+    background-color: $color-white;
+    border-radius: $radius-md;
+    box-shadow: var(--shadow-lg);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+
+    @media all and (max-width: $bp-tablet) {
+        width: 100%;
+        bottom: 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    &.active {
+        right: 1rem;
+        opacity: 1;
+        pointer-events: all;
+        transition: all 0.5s ease-in-out;
+
+        @media all and (max-width: $bp-tablet) {
+            left: 0;
+        }
+    }
+
+    &__image {
+        padding-bottom: 40%;
+        margin-bottom: 0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 2rem 0;
+
+        h4 {
+            padding-bottom: 0;
+        }
+    }
+
+    &__close-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+
+        span {
+            width: 1px;
+            height: 1rem;
+            background-color: $color-grey;
+            position: absolute;
+            transform: rotate(45deg);
+            transition: all 0.2s ease-in-out;
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:hover {
+            span {
+                background-color: $color-black;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &__form {
+        padding: 1rem 2rem;
+
+        .contact__form__row {
+            padding-bottom: 1rem;
+        }
+
+        .wpcf7-spinner {
+            position: absolute;
+        }
+
+        .wpcf7-response-output {
+            padding: 0;
+            margin: 0;
+            border: none;
+            color: $color-grey;
+        }
+    }
+}

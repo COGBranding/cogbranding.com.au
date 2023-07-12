@@ -1,0 +1,26 @@
+.images {
+    &__row {
+        padding-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            gap: 1rem;
+        }
+    }
+
+    &__item {
+        flex: 1 1 20%;
+        padding-bottom: 25%;
+        border-radius: $radius-md;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media all and (max-width: $bp-tablet) {
+            flex: 1 1 33%;
+            padding-bottom: 50%;
+        }
+    }
+}

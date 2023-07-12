@@ -1,0 +1,73 @@
+.single-post {
+    &__hero {
+        &__row {
+            padding-top: 0;
+            padding-bottom: 3rem;
+        }
+
+        &__content-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 5rem;
+        }
+
+        &__content__col {
+            &--content {
+                flex: 1 1 25%;
+            }
+
+            &--image {
+                flex: 1 1 75%;
+                padding-bottom: 40%;
+                border-radius: $radius-md;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__title {
+            padding: 3rem 0;
+            max-width: 900px;
+            color: $color-white;
+            font-size: 3.5rem;
+            line-height: 1;
+
+            @media all and (max-width: $bp-tablet-sm) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__content,
+        &__meta {
+            max-width: 400px;
+
+            p {
+                padding: 0;
+                color: $color-white;
+            }
+        }
+
+        &__content {
+            padding-bottom: 2rem;
+        }
+
+        &__meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+    &__blog-content {
+        max-width: 900px;
+        padding-top: 4rem;
+
+        .wp-block-heading {
+            padding-top: 2rem !important;
+        }
+
+        strong {
+            font-weight: normal !important;
+        }
+    }
+}

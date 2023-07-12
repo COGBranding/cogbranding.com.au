@@ -1,0 +1,261 @@
+.contact {
+    padding-bottom: 4rem;
+    &__content {
+        width: 100%;
+
+        @media all and (min-width: $bp-desktop) {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+    }
+
+    &__row {
+        padding: 2rem 2rem 0;
+        display: flex;
+
+        @media all and (max-width: $bp-tablet) {
+            padding: 2rem 1rem 0;
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+
+    &__col {
+        flex: 1 1 50%;
+
+        &--image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: $radius-md;
+
+            @media all and (max-width: $bp-tablet) {
+                padding-bottom: 70%;
+            }
+
+            @media all and (max-width: $bp-mobile) {
+                padding-bottom: 80%;
+            }
+        }
+
+        &--content {
+            display: flex;
+            padding: 3rem 2rem;
+
+            @media all and (max-width: $bp-tablet) {
+                padding: unset;
+            }
+        }
+    }
+
+    &__heading {
+        padding-bottom: 1.5rem;
+
+        @media all and (max-width: $bp-tablet) {
+            padding-bottom: 0.75rem;
+        }
+    }
+
+    &__text {
+        padding-bottom: 3rem !important;
+
+        @media all and (max-width: $bp-tablet) {
+            padding-bottom: 2rem !important;
+        }
+
+        a {
+            color: $color-primary;
+        }
+    }
+
+    .required {
+        color: var(--color-error-600);
+    }
+
+    &__form {
+        &__row {
+            padding-bottom: 1.5rem;
+
+            &__cta {
+                padding-bottom: 0;
+            }
+
+            br {
+                display: none;
+            }
+
+            input,
+            textarea {
+                @extend %input;
+
+                &[type="radio"] {
+                    cursor: pointer;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    background-color: $color-white;
+                    width: 1rem;
+                    height: 1rem;
+                    border: 1px solid $color-border;
+                    border-radius: 6px;
+
+                    &:checked {
+                        background-image: url(/wp-content/uploads/2023/06/icon-tick.svg);
+                        background-color: $color-primary-50;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border-radius: 6px;
+                        border: 1px solid var(--orange-900, #f47920);
+                    }
+                }
+
+                &[type="submit"] {
+                    background-color: $color-primary;
+                    border: 0;
+                    color: $color-white;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    &:focus,
+                    &:focus-visible {
+                        border: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            textarea {
+                height: 120px;
+                resize: vertical;
+            }
+        }
+
+        .wpcf7-spinner {
+            display: none;
+        }
+    }
+
+    &__links {
+        &__row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 4rem 2rem;
+
+            @media all and (max-width: $bp-tablet) {
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+                padding: 3rem 1rem;
+            }
+        }
+
+        &__item {
+            flex: 1 1 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            * {
+                text-align: center;
+            }
+
+            &__icon-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1.25rem;
+                width: 3rem;
+                height: 3rem;
+                background-color: $color-primary-100;
+                border: 8px solid $color-primary-50;
+                border-radius: 50%;
+            }
+
+            &__icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+
+            &__heading {
+                padding-bottom: 0.5rem;
+            }
+
+            &__body {
+                padding-bottom: 1.25rem;
+            }
+
+            &__link {
+                a {
+                    color: $color-primary;
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.75;
+                        transition: all 0.1s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkbox-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.column {
+    flex: 1;
+}
+
+.label-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+.label-text {
+    margin-left: 5px;
+}
+
+.services {
+    &-label {
+        color: #000;
+        font-size: 15px;
+        font-family: "SuisseIntl-Regular", sans-serif;
+        line-height: 160%;
+    }
+    &-columns {
+        @media all and (min-width: $bp-desktop) {
+            display: flex;
+        }
+
+        .column {
+            input {
+                margin: 0;
+            }
+
+            p {
+                padding-bottom: 0 !important;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.wpcf7-form span {
+    color: var(--color-black, #000);
+    font-size: 15px;
+    font-family: "SuisseIntl-Regular", sans-serif;
+    line-height: 160%;
+}

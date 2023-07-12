@@ -1,0 +1,44 @@
+.section {
+    &__title_text {
+        gap: 120px;
+        @media all and (max-width: 768px) {
+            display: block !important;
+        }
+
+        &.wp-block-columns {
+            padding-bottom: 0px !important;
+        }
+    }
+
+    &__text {
+        width: 50% !important;
+        max-width: 50% !important;
+
+        @media all and (max-width: 768px) {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+    &__title {
+        width: 50% !important;
+        max-width: 50% !important;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.48px;
+        text-transform: none;
+
+        @media all and (max-width: 768px) {
+            font-size: 24px;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+}
+.single-post__contents {
+    .wp-block-columns {
+        &.row {
+            padding-bottom: 0px !important;
+        }
+    }
+}

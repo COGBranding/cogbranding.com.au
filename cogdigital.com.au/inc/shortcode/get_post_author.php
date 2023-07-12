@@ -50,14 +50,13 @@ function get_post_author()
                         <?php echo $author_name; ?> </h2>
                 </div>
 
-                <div class="post-author__meta">
-                    <?php echo $author_description; ?>
+				<div class="post-author__meta">
+					<?php echo $author_description; ?>
 
-                    <a href="<?php echo $author_url; ?>" class="text-uppercase text-uppercase--sm">
-                        Posts by <?php echo $author_name; ?>
-                    </a>
-                </div>
-
+					<a href="<?php echo $author_url; ?>" class="text-uppercase text-uppercase--sm">
+						Posts by <?php echo $author_name; ?>
+					</a>
+				</div>
             </div>
         </div>
     </div>

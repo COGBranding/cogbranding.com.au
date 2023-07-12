@@ -1,0 +1,10 @@
+.dynamic-circle {
+    position: fixed;
+    line-height: 1.2;
+    background-color: $color-black;
+    color: $color-white;
+    height: 4rem;
+    width: 4rem;
+    @extend .text-uppercase;
+    @extend .text-uppercase--sm;
+}

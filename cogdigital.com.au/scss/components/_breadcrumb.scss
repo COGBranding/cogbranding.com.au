@@ -1,0 +1,27 @@
+.breadcrumb {
+    a {
+        // @extend %text-link;
+        color: $color-black;
+    }
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 1rem !important;
+
+    .hero__page-title {
+        padding-bottom: 0px !important;
+    }
+    .bc-sep {
+        display: block;
+        line-height: 1;
+        color: $color-black;
+
+        .outer {
+            .inner {
+                &::before {
+                    content: url("/wp-content/themes/cog-digital/icons/bc-sep.svg");
+                }
+            }
+        }
+    }
+}

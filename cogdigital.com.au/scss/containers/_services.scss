@@ -1,0 +1,91 @@
+.services {
+    &__content {
+        padding-bottom: 4rem;
+        max-width: 400px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem 2rem;
+
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+
+        .slick-navigation {
+            display: none;
+
+            @media all and (max-width: $bp-tablet-sm) {
+                display: block;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 1.5rem;
+        width: 31%;
+        padding-right: 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            width: 47%;
+        }
+
+        @media all and (max-width: $bp-tablet-sm) {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__acronym {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 3rem;
+            max-width: 3rem;
+            height: 3rem;
+            background-color: var(--black-5);
+            border-radius: $radius-md;
+            transition: all 0.2s ease-in-out;
+
+            @media all and (max-width: $bp-tablet-sm) {
+                margin-bottom: 2rem;
+            }
+
+            &__content {
+                font-family: $font-medium;
+                color: $color-black;
+            }
+        }
+
+        &__title {
+            padding-bottom: 0.75rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &__excerpt {
+            padding-bottom: 2rem !important;
+        }
+
+        &__link {
+            padding-bottom: 4px;
+            color: $color-black;
+            @extend %text-link;
+        }
+
+        &:hover {
+            --text-underline: 100%;
+
+            .services__item__acronym {
+                background-color: var(--black-10);
+                transition: all 0.2s ease-in-out;
+            }
+
+            .services__item__title {
+                opacity: 0.55;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

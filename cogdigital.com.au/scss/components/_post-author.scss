@@ -11,8 +11,8 @@ $bp-post-author: 850px;
         display: flex;
         padding: 0;
         max-width: 850px;
-        border: 1px solid $color-border;
-        border-radius: $radius-md;
+        // border: 1px solid $color-border;
+        // border-radius: $radius-md;
 
         @media all and (max-width: $bp-post-author) {
             flex-direction: column;
@@ -40,12 +40,12 @@ $bp-post-author: 850px;
     &__avatar {
         width: 200px;
         height: 100%;
+        border-radius: $radius-md;
         object-fit: cover;
 
         @media all and (max-width: $bp-post-author) {
             width: auto;
             height: 6rem;
-            border-radius: $radius-md;
         }
     }
 
@@ -61,10 +61,11 @@ $bp-post-author: 850px;
         top: 50%;
         left: 80%;
         transform: translateY(-50%);
+        display: none;
 
-        @media all and (max-width: $bp-post-author) {
-            display: none;
-        }
+        // @media all and (max-width: $bp-post-author) {
+        //     display: none;
+        // }
     }
 
     &__content {

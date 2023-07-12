@@ -1,0 +1,207 @@
+.single-project {
+    // Hero section
+    &__hero {
+        height: calc(100vh - 120px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &__overlay {
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0) 20%
+            );
+        }
+
+        &__content__row {
+            padding: 4rem 2rem;
+
+            @media all and (max-width: $bp-tablet) {
+                padding: 4rem 1rem;
+            }
+        }
+    }
+
+    &__excerpt {
+        max-width: 1000px;
+
+        p {
+            @extend .heading-lg;
+            font-size: 3.5rem;
+            line-height: 1;
+            letter-spacing: -0.32px;
+            color: $color-black;
+
+            @media all and (max-width: $bp-tablet-sm) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    &__overview {
+        &__row {
+            display: flex;
+            gap: 2rem;
+
+            @media all and (max-width: $bp-tablet) {
+                flex-direction: column;
+                gap: 4rem;
+            }
+        }
+
+        &__col {
+            width: 100%;
+
+            &:empty {
+                @media all and (max-width: $bp-tablet) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__introduction {
+        max-width: 600px;
+        @extend .heading-xs;
+        font-family: $font-regular;
+        font-size: 1.25rem;
+        line-height: 1.4;
+        color: $color-black;
+    }
+
+    &__content-item {
+        display: flex;
+        justify-content: space-between;
+
+        &.vertical {
+            display: block !important;
+        }
+
+        @media all and (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 4rem;
+        }
+
+        &__heading {
+            color: $color-black;
+        }
+
+        &__content {
+            max-width: 800px;
+
+            @media all and (min-width: $bp-desktop) {
+                width: 450px;
+                max-width: 450px;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            a {
+                color: $color-black;
+                @extend %text-link;
+            }
+        }
+    }
+
+    &__btn--wrapper {
+        gap: 2rem;
+    }
+
+    &__link {
+        padding-bottom: 4px;
+        color: $color-black;
+        @extend %text-link;
+        @extend .text-uppercase;
+        @extend .text-uppercase--sm;
+    }
+}
+
+.single-project__images__wrapper {
+    .single-project__images {
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.single-project__images {
+    &__row {
+        display: flex;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        @media all and (max-width: $bp-tablet) {
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+    }
+
+    &__item {
+        padding-bottom: 45%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media all and (max-width: $bp-tablet) {
+            padding-bottom: 70%;
+        }
+
+        @media all and (max-width: $bp-mobile) {
+            padding-bottom: 80%;
+        }
+    }
+
+    &--fullwidth {
+        .single-project__images__item {
+            width: 100%;
+        }
+    }
+
+    &--half {
+        .single-project__images__item {
+            flex: 0 1 50%;
+
+            @media all and (max-width: $bp-tablet) {
+                padding-bottom: 80%;
+            }
+
+            @media all and (max-width: $bp-mobile) {
+                padding-bottom: 95%;
+            }
+        }
+    }
+
+    &--three-quarter {
+        .single-project__images__row {
+            @media all and (min-width: $bp-desktop) {
+                align-items: flex-start;
+            }
+        }
+
+        .single-project__images__item {
+            &--left {
+                flex: 0 1 68%;
+            }
+
+            &--right {
+                flex: 0 1 32%;
+                padding-bottom: 30%;
+
+                @media all and (max-width: $bp-tablet) {
+                    padding-bottom: 50%;
+                }
+
+                @media all and (max-width: $bp-mobile) {
+                    padding-bottom: 60%;
+                }
+            }
+        }
+    }
+}

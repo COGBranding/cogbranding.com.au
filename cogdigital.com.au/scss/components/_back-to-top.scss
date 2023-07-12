@@ -1,0 +1,22 @@
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(225 225, 225, 0.8);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 999;
+    transform: rotate(180deg);
+
+    &::before {
+        content: url("/wp-content/uploads/2023/06/icon-chevron-down.svg");
+        width: 24px;
+        height: 24px;
+    }
+}

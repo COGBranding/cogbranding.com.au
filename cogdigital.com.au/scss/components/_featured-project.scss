@@ -1,0 +1,36 @@
+.featured-project {
+    &__items {
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &__title-wrapper {
+            display: flex;
+            gap: 1rem;
+        }
+
+        &__title {
+            padding-bottom: 0 !important;
+        }
+
+        &__category {
+        }
+
+        &__excerpt {
+            p {
+                color: $color-black;
+            }
+        }
+    }
+
+    &__col {
+        &--content {
+        }
+
+        &--image {
+        }
+    }
+}
